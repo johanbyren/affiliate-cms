@@ -6,20 +6,35 @@
   </div>-->
   <div id="app" class="container">
     <main>
-      <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
-        <img alt="Vue logo" src="./assets/logo.png" width="50px">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
+        <img alt="Vue logo" src="./assets/logo.png" width="50px"/>
+        <!-- Mobile menu button -->
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          v-b-toggle="'navbarText'"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
         <div class="collapse navbar-collapse" id="navbarText">
           <!-- Here is the text and links to pages -->
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <route-link to="/" class="nav-link">Home</route-link>
+              <!-- <route-link to="/" class="nav-link">Home</route-link> -->
+              <a class="nav-link" href="#">Link 1</a>
             </li>
             <li class="nav-item">
-              <route-link to="/" class="nav-link">All Products</route-link>
+              <!-- <route-link to="/" class="nav-link">All Products</route-link> -->
+              <a class="nav-link" href="#">Link 2</a>
             </li>
             <li class="nav-item">
-              <route-link to="/" class="nav-link">About</route-link>
+              <!-- <route-link to="/" class="nav-link">About</route-link> -->
+              <a class="nav-link" href="#">Link 3</a>
             </li>
           </ul>
 
@@ -31,7 +46,7 @@
       </nav>
     </main>
 
-    <div style="height:500px; width: 100%; background-color:grey">remove later</div>
+    <!-- <div style="height:500px; width: 100%; background-color:grey">remove later</div> -->
     <!-- Just fillout, remove later -->
     <footer class="container-fluid footer text-left mt-3">
       <p class="mr-auto">
@@ -47,7 +62,7 @@
         </a>
         <!--<a href="https://www.linkedin.com/in/ikismail7/" target="_blank" style="margin-right:10px">
           <i class="fa fa-linkedin" aria-hidden="true" style="font-size:20px"></i>
-        </a> -->
+        </a>-->
       </div>
     </footer>
   </div>
@@ -59,7 +74,7 @@ import Vue from "vue";
 
 export default Vue.extend({
   name: "app"
-  // 2. Here is where we load in a template. Look at comment nr 1 as well.. This links to page HelloWorld.vue exemple file. 
+  // 2. Here is where we load in a template. Look at comment nr 1 as well.. This links to page HelloWorld.vue exemple file.
   // components: {
   //   HelloWorld
   // }
@@ -92,8 +107,8 @@ export default Vue.extend({
 html {
   position: relative;
   min-height: 100%;
-  margin: 0px;
 }
+
 body {
   margin-bottom: 60px; /* Margin bottom by footer height */
 }

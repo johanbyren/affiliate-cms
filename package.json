@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.2.1",
+    "bootstrap-vue": "^2.0.0-rc.11",
     "path": "^0.12.7",
     "serverless": "^1.36.1",
     "serverless-offline": "^4.0.0",
