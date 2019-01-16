@@ -27,3 +27,8 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### For design. Looking in to this: 
+https://github.com/ikismail/Vue-ShoppingCart/blob/master/src/App.vue
+https://vue-shop-cart.herokuapp.com/#/
