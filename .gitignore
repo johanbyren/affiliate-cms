@@ -1,6 +1,11 @@
+# package directories
 .DS_Store
 node_modules
 /dist
+jspm_packages
+
+# Serverless directories
+.serverless
 
 # local env files
 .env.local
