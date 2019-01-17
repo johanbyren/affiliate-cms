@@ -1,13 +1,8 @@
 <template>
-  <!-- 1. This is an exemple for loading in stuff to page. Look at comment 2 as well
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>-->
   <div id="app" class="container">
     <main>
       <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
-        <img alt="Vue logo" src="./assets/logo.png" width="50px" />
+        <img alt="Vue logo" src="./assets/logo.png" width="50px">
         <!-- Mobile menu button -->
         <button
           class="navbar-toggler collapsed"
@@ -25,29 +20,24 @@
           <!-- Here is the text and links to pages -->
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <!-- <route-link to="/" class="nav-link">Home</route-link> -->
-              <a class="nav-link" href="#">Link 1</a>
+              <router-link to="/home" class="nav-link">Home</router-link>
             </li>
             <li class="nav-item">
-              <!-- <route-link to="/" class="nav-link">All Products</route-link> -->
-              <a class="nav-link" href="#">Link 2</a>
+              <router-link to="/products" class="nav-link">All Products</router-link>
             </li>
             <li class="nav-item">
-              <!-- <route-link to="/" class="nav-link">About</route-link> -->
-              <a class="nav-link" href="#">Link 3</a>
+              <router-link to="/about" class="nav-link">About</router-link>
             </li>
           </ul>
-
-          <!-- Here is the dropdown menu -->
-          <!-- <ul>
-            <li></li>
-          </ul>-->
         </div>
       </nav>
     </main>
 
-    <!-- <div style="height:500px; width: 100%; background-color:grey">remove later</div> -->
-    <!-- Just fillout, remove later -->
+    <router-view></router-view>
+    <!-- <div>
+      <helloWorld></helloWorld>
+    </div> -->
+
     <footer class="container-fluid footer text-left mt-3">
       <p class="mr-auto">
         Developed by:
@@ -60,9 +50,6 @@
         <a href="https://github.com/johanbyren" target="_blank" style="margin-right:10px">
           <i class="fab fa-github" aria-hidden="true" style="font-size:20px"></i>
         </a>
-        <!--<a href="https://www.linkedin.com/in/ikismail7/" target="_blank" style="margin-right:10px">
-          <i class="fa fa-linkedin" aria-hidden="true" style="font-size:20px"></i>
-        </a>-->
       </div>
     </footer>
   </div>
@@ -75,17 +62,16 @@ import Vue from "vue";
 export default Vue.extend({
   name: "app",
   data() {
-    return{
+    return {
       show: false
-    }
+    };
   },
   methods: {
     toggleNavbar() {
       this.show = !this.show;
     }
-  }
-  // 2. Here is where we load in a template. Look at comment nr 1 as well.. This links to page HelloWorld.vue exemple file.
-  // components: {
+  },
+  // components: { // Load in the page in this component
   //   HelloWorld
   // }
 });

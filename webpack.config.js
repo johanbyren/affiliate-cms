@@ -8,6 +8,9 @@ module.exports = {
   resolve: {
     symlinks: false,
     extensions: ['.js', '.jsx', '.json', '.ts'],
+    alias: {
+      vue: 'vue/dist/vue.js'
+    }
   },
   output: {
     libraryTarget: 'commonjs',
