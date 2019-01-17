@@ -7,7 +7,7 @@
   <div id="app" class="container">
     <main>
       <nav class="navbar navbar-expand-lg navbar-light bg-light" id="nav">
-        <img alt="Vue logo" src="./assets/logo.png" width="50px"/>
+        <img alt="Vue logo" src="./assets/logo.png" width="50px" />
         <!-- Mobile menu button -->
         <button
           class="navbar-toggler collapsed"
@@ -16,12 +16,12 @@
           aria-controls="navbarText"
           aria-expanded="false"
           aria-label="Toggle navigation"
-          v-b-toggle="'navbarText'"
+          v-on:click="toggleNavbar"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarText">
+        <div class="collapse navbar-collapse" id="navbarText" v-bind:class="{ 'show': show }">
           <!-- Here is the text and links to pages -->
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -73,7 +73,17 @@ import Vue from "vue";
 // import HelloWorld from "./components/HelloWorld.vue";
 
 export default Vue.extend({
-  name: "app"
+  name: "app",
+  data() {
+    return{
+      show: false
+    }
+  },
+  methods: {
+    toggleNavbar() {
+      this.show = !this.show;
+    }
+  }
   // 2. Here is where we load in a template. Look at comment nr 1 as well.. This links to page HelloWorld.vue exemple file.
   // components: {
   //   HelloWorld
