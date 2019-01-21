@@ -17,10 +17,9 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarText" v-bind:class="{ 'show': show }">
-          <!-- Here is the text and links to pages -->
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <router-link to="/home" class="nav-link">Home</router-link>
+              <router-link to="/" class="nav-link">Home</router-link>
             </li>
             <li class="nav-item">
               <router-link to="/products" class="nav-link">All Products</router-link>
@@ -56,103 +55,103 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-// import HelloWorld from "./components/HelloWorld.vue";
+  import Vue from "vue";
+  // import HelloWorld from "./components/HelloWorld.vue";
 
-export default Vue.extend({
-  name: "app",
-  data() {
-    return {
-      show: false
-    };
-  },
-  methods: {
-    toggleNavbar() {
-      this.show = !this.show;
-    }
-  },
-  // components: { // Load in the page in this component
-  //   HelloWorld
-  // }
-});
+  export default Vue.extend({
+    name: "app",
+    data() {
+      return {
+        show: false
+      };
+    },
+    methods: {
+      toggleNavbar() {
+        this.show = !this.show;
+      }
+    },
+    // components: { // Load in the page in this component
+    //   HelloWorld
+    // }
+  });
 </script>
 
 <style lang="scss">
-@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+  @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+  @import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
 
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 15px;
-  a {
-    font-weight: bold;
+  #app {
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
     color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+  }
+
+  #nav {
+    padding: 15px;
+    a {
+      font-weight: bold;
+      color: #2c3e50;
+      &.router-link-exact-active {
+        color: #42b983;
+      }
     }
   }
-}
 
-html {
-  position: relative;
-  min-height: 100%;
-}
+  html {
+    position: relative;
+    min-height: 100%;
+  }
 
-body {
-  margin-bottom: 60px; /* Margin bottom by footer height */
-}
+  body {
+    margin-bottom: 60px; /* Margin bottom by footer height */
+  }
 
-.footer {
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  height: 60px; /* Set the fixed height of the footer here */
-  background-color: #f5f5f5;
-}
-footer {
-  background-color: #f2f2f2;
-  padding: 25px;
-}
-.footer p,
-.footer div {
-  display: inline;
-  vertical-align: top;
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  line-height: 28px;
-}
-.footer p {
-  font-weight: bold;
-}
-* a {
-  color: #42b983;
-}
-* .fa {
-  font-size: 18px;
-}
-.buttonGreen-outline {
-  width: 100%;
-  color: #41b883;
-  background-color: transparent;
-  border-color: #41b883;
-}
-.buttonGreen-outline:hover {
-  color: #ffffff;
-  background-color: #41b883;
-  border-color: #41b883;
-}
-.buttonGreen {
-  color: #fff;
-  background-color: #41b883;
-}
-.buttonGreen:hover {
-  background-color: #42a97b;
-}
+  .footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Set the fixed height of the footer here */
+    background-color: #f5f5f5;
+  }
+  footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+  }
+  .footer p,
+  .footer div {
+    display: inline;
+    vertical-align: top;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .footer p {
+    font-weight: bold;
+  }
+  * a {
+    color: #42b983;
+  }
+  * .fa {
+    font-size: 18px;
+  }
+  .buttonGreen-outline {
+    width: 100%;
+    color: #41b883;
+    background-color: transparent;
+    border-color: #41b883;
+  }
+  .buttonGreen-outline:hover {
+    color: #ffffff;
+    background-color: #41b883;
+    border-color: #41b883;
+  }
+  .buttonGreen {
+    color: #fff;
+    background-color: #41b883;
+  }
+  .buttonGreen:hover {
+    background-color: #42a97b;
+  }
 </style>

@@ -8,7 +8,7 @@ Vue.use(VueRouter);
 const router = new VueRouter({
   mode: 'history',
   routes: [
-    { path: '/home', name: 'home', component: () => import('./components/Home.vue')},
+    { path: '/', name: 'home', component: () => import('./components/Home.vue')},
     { path: '/products', name: 'products', component: () => import('./components/Products.vue')},
     { path: '/about', name: 'about', component: () => import('./components/About.vue')}
   ]
