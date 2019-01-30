@@ -68,8 +68,15 @@
     methods: {
       toggleNavbar() {
         this.show = !this.show;
+      },
+      getProducts() {
+        console.log("We are in get products..");
+        // TODO: here we should fetch products on start....
       }
     },
+    created() {
+      this.getProducts(); // Run this on start. 
+    }
     // components: { // Load in the page in this component
     //   HelloWorld
     // }

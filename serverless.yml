@@ -49,6 +49,14 @@ functions:
           path: hello
           method: get
 
+  getProductFeedFromAddrecord:
+    handler: src/lambda/productFeed.getProductFeed
+    decription: Get product feed as json from Adrecord.com
+    events: 
+      - http:
+          path: getProductFeed
+          method: get
+
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
